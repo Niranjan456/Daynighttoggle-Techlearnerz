@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  height: 100vh;
+  padding: 40px;
+  text-align: justify;
+  box-sizing: border-box;
+  transition: 0.2s;
+  color: #a2a2a2;
+  background-color: #f4f4f4;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.text {
+  width: 60%;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #dcdcdc);
+  box-shadow: 3px 3px 5px #bebebe, -3px -3px 5px #ffffff;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fa-sun {
+  opacity: 1;
+  color: orange;
+  font-size: 25px;
+  text-shadow: 0px 0px 20px orange;
+  transition: 1s;
+}
+.fa-moon {
+  opacity: 0;
+  color: white;
+  font-size: 25px;
+  text-shadow: 0px 0px 20px white;
+  transition: 1s;
+}
+
+#switch-button:checked ~ label .fa-sun {
+  opacity: 0;
+}
+
+#switch-button:checked ~ label .fa-moon {
+  opacity: 1;
+}
+
+#switch-button:checked ~ .content {
+  background-color: #1a1b1f;
+  color: white;
+}
+
+#switch-button:checked ~ .content .text {
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  box-shadow: 3px 3px 6px #101114,
+  -3px -3px 6px #3e3f42;
+}
